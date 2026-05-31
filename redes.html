@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<script src="js/index.js"></script>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Académico</title>
+</head>
+<body>
+
+     <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo">
+            </div>
+            <div class="user-name">
+                <span>Fatui</span>
+            </div>
+        </div>
+
+           <div class="nav-links">
+    <a href="index.html" class="nav-btn">Inicio</a>
+    <a href="software.html" class="nav-btn">Software</a>
+    <a href="virtualizacion.html" class="btn-nav">Virtualización</a>
+    <a href="redes.html" class="btn-nav">Redes</a>
+    <a href="so.html" class="nav-btn">SO</a>
+    <a href="bd.html" class="nav-btn">BD</a>
+    
+    
+           </div>
+        
+        <div class="nav-center">
+           <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar">
+           </div>
+           
+    </nav>
+         <main>
+
+          <main class="Title">
+            <div class="Title-container-redes">
+              <h1>Redes</h1>
+            </div>
+          </main>
+
+         <main class="Content">
+            <div class="container">
+                <p>
+                    Al estudiar la infraestructura de comunicación, entiendo una red de computadoras como el conjunto de nodos interconectados (computadoras, servidores, enrutadores) y canales físicos o inalámbricos que permiten el intercambio global de datos e información. Históricamente, la informática dependía de sistemas aislados donde mover datos requería del traslado físico de tarjetas perforadas o cintas magnéticas, sin embargo, la evolución hacia las redes transformó el paradigma tecnológico. El propósito técnico de una red es establecer una arquitectura lógica y física que garantice que un paquete de datos viaje desde un origen hasta un destino de forma íntegra, rápida y confiable.
+                    
+                </p>
+
+                <p>
+                    Esta infraestructura se organiza y clasifica según su alcance geográfico e infraestructura de control:
+                </p>
+
+                <p>
+                    <li>
+                        <strong>Red de Área Local (LAN):</strong> Interconecta dispositivos en un área pequeña y limitada, como una oficina, laboratorio o el hogar, caracterizándose por sus altas velocidades de transferencia y administración privada.
+                    </li>
+
+                    <li>
+                        <strong>Red de Área Metropolitana (MAN):</strong> Cubre una extensión geográfica equivalente a un municipio o una ciudad entera, uniendo múltiples redes LAN.
+                    </li>
+
+                    <li>
+                        <strong>Red de Área Amplia (WAN):</strong> Se extiende sobre regiones, paises o continentes enteros utilizando enlaces satelites o cables submarinos. Asimismo, la arquitectura define topologías (la distribucion física o lógica de los cables y nodos, como la topología en estrella o malla) y <strong>Modelos de Distribución de Tráfico</strong> que gobierna cómo se transmiten las señales: <strong> Unicast</strong> (comunicación directa de punto a punto), <strong>Broadcast</strong> (difusión de un origen hacia todos los nodos de la red) y <strong>Multicast</strong> (envio selectivo de un origen a un grupo específico de destinatarios).
+                    </li>
+                </p>
+
+                <p>
+                    Un escenario sumamente interactivo y real que demuestra la operación absoluta de una red de computadoras ocurre cuando diseñamos y simulamos una topología dentro del software <strong>Cisco Packet Tracer,</strong> recreando la arquitectura de un laboratorio o una oficina.
+                </p>
+
+                <p>
+                    <li>
+                        <strong>Resolución de Direccionamiento y Conmutación Local:</strong> Al arrastrar varias computadoras de escritorio y conectarlas mediante cables directos hacia un Switch de 24 puertos (formando una Red de Área Local-LAN), los dispositivos no se comunican de forma mágica. Necesitamos ingresar a la configuración IP de cada equipo y asignarles una dirección lógica (por ejemplo, "192.168.1.2" con su respectiva máscara de subred). Si activamos el <strong>Modo Simulación</strong> de Packet Tracer y enviamos un paquete desde la PC-A hacia la PC-B, veremos en tiempo real cómo la información se encapsula en tramas, viajara por el cable fisico y el Switch lee la dirección MAC de destino para conmutar los datos directamente al puerto correcto sin desviaciones.
+                    </li>
+
+                    <li>
+                        <strong>Diagnóstico de Enrutamiento y Tráfico Global:</strong> Si expandimos la topología agregando un Router para conectar nuestra LAN con una red externa (simulando la Red de Área Amplia-WAN, o internet), podemos abrir la consola de comandos de una de las computadoras virtuales y ejecutar la utilidad "ping" hacia la IP del servidor remoto. Packet Tracer nos permite observar el flujo exacto de los datos: cómo el paquete, al no encontrar el destino de la red local, es enviado hacia la "Puerta de Enlace Predeterminada" (Gateway) del Router. Este proceso ejecuta una comunicación <strong>Unicast</strong> directa que mide la conectividad, mientras que en segundo plano observamos cómo destellan paquetes de <strong>Broadcast</strong> que los equipos lanzan a toda la red para descubrir quién es el dueño de una dirección física, evidenciando la coordinación lógica necesaria para que el internet funcione.
+                    </li>
+
+             <div class="img_redes">
+                        <img src="img/cisco.png" alt="Edit" class="logo-cisco">
+                       
+               </div>
+                </p>
+
+                 <h3>Reflexión Personal</h3>
+
+                     <p>
+                        <li>
+                        <strong>¿Por qué elegí este tema?</strong>
+                       </li>
+                      <p>
+                        Elegí profundizar en las redes de computadoras porque considero que representan el sistema circulatorio del mundo globalizado actua. Me parece fascinante cómo la unión de reglas matemáticas de bajo nivel, protocolos lógicos y medios físicos (como la luz viajando a través de hilos de fibra óptica) permiten que una línea de código escrita en mi computadora se replique en un servidor al otro lado del planeta en cuestión de milisegundos. Comprender cómo se encapsulan, direccionan y transportan los datos a través de las diferentes capas de una red nos cambia la perspectiva como futuros ingenieros en sistemas, permitiéndonos diseñar arquitecturas de software distribuidas, tolerantes a fallos y optimizadas para el consumo eficiente de ancho de banda.
+                      </p>
+                     </p>
+
+                     <p>
+                        <li>
+                            <strong>¿Dónde se aplica?</strong>
+                        </li>
+                         <p>
+                            A nivel profesional, las redes de computadoras se aplican en el núcleo de toda la infraestructura tecnológica moderna. Es el cimiento absoluto de la Computación en la Nube (Cloud Computing), donde centros de datos masivos coordinan millones de transacciones por segundo. es la tecnoglogía detrás de la seguridad informática y la administración de servidores en corporativos, el soporte del streaming de alta definición y los videojuegos en línea, y el pilar fundamental en la interconexión a gran escala de miles de millones de dispositivos en el Internet de las Cosas (IoT), donde sensores autónomos transmiten telemetría en tiempo real para automatizar industrias, ciudades inteligenetes y redes eléctricas enteras.
+                         </p>
+                     </p>
+
+
+
+
+             </div>
+         </main>
+    </main>
+               <script src="js/particles.min.js"></script>
+           <script src="js/app.js"></script>
+
+</body>
+</html>

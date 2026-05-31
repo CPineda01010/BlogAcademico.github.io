@@ -20,24 +20,24 @@ window.onscroll= () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-container input');
-    const contentArea = document.querySelector('.Content .container');
+    const searchZones = document.querySelectorAll('.Content .container, .contenedor-temas');
 
-    if (!searchInput || !contentArea) {
-        console.error("No se encontró el buscador o el contenido. Revisa las clases.");
+    if (!searchInput || searchZones.length === 0) {
+        console.error("No se encontró el buscador o las zonas de contenido.");
         return;
     }
-
     searchInput.addEventListener('input', (e) => {
         const searchTerm = e.target.value.trim();
 
-        contentArea.innerHTML = contentArea.innerHTML.replace(/<mark>|<\/mark>/g, "");
-
+        searchZones.forEach(zone => {
+            zone.innerHTML = zone.innerHTML.replace(/<mark class="resaltado">|<\/mark>/g, "");
+        });
         if (searchTerm.length < 2) return;
-
-        const regex = new RegExp(`(${searchTerm})`, 'gi');
-        contentArea.innerHTML = contentArea.innerHTML.replace(regex, '<mark>$1</mark>');
-
-        const firstMatch = contentArea.querySelector('mark');
+        const regex = new RegExp(`(?<!<[^>]*?)(${searchTerm})`, 'gi');
+        searchZones.forEach(zone => {
+            zone.innerHTML = zone.innerHTML.replace(regex, '<mark class="resaltado">$1</mark>');
+        });
+        const firstMatch = document.querySelector('mark.resaltado');
         if (firstMatch) {
             firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
