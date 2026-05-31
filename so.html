@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="styles.css">
+<script src="js/index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operativos</title>
+</head>
+<body>
+    
+     <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo">
+            </div>
+            <div class="user-name">
+                <span>Fatui</span>
+            </div>
+        </div>
+
+           <div class="nav-links">
+            <a href="index.html" class="nav-btn">Inicio</a>
+            <a href="software.html" class="nav-btn">Software</a>
+            <a href="virtualizacion.html" class="btn-nav">Virtualización</a>
+            <a href="so.html" class="nav-btn">SO</a>
+            <a href="bd.html" class="nav-btn">BD</a>
+    
+    
+        </div>
+        
+        <div class="nav-center">
+           <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar">
+        </div>
+           
+    </nav>
+    <main>
+        <main class="Title">
+            <div class="Title-container-so">
+              <h1>Sistemas Operativos</h1>
+            </div>
+    </main>
+        <main class="Content">
+        <div class="container">
+            <p>
+                Al estudiar la arquitectura interna de los entornos informáticos, entiendo un sistema operativo como el software fundamental y más crítico de una computadora. No es simplemente una interfaz visual para el usuario, sino el intermediario directo que hace posible la comunicación entre el hardware físico (procesador, memoria, dispositivos de almacenamiento) y los programas de aplicación que ejecutamos diariamente. Su propósito técnico es abstraer la complejidad del hardware y proveer un entorno seguro, eficiente y ordenado para la ejecución de tareas.
+            </p>
+            
+            <p>
+                Este sistema se encarga de gestionar de forma inteligente los recursos más valiosos del computador a través de componentes internos especializados. El corazón del sistemas es el <strong>Kernel (Núcleo),</strong> que controla el acceso directo al procesador y gestiona la memoria RAM mediante técnicas de paginación y asignación dinámica para evitar que los programas colisionen entre sí. Asimismo, el sistema operativo implementa el <strong>Administrador de Procesos,</strong> que planifica el orden y el tiempo de ejecución en la CPU, el <strong>Sistema de Archivos,</strong> que organiza de forma lógica la información en los discos duros, y los <strong>Controladores (Drivers),</strong> que actúan como traductores para que el núcleo reconozca cualquier periférico conectado.
+
+               <div class="img_so">
+                        <img src="img/windows.png" alt="Edit" class="logo-windows">
+                        <img src="img/ubuntu.png" alt="Inter" class="logo-ubuntu">
+               </div>
+
+
+            </p>
+
+            <p>
+                Un escenario directo y fundamental dentro de nuestras prácticas lógicas ocurre cuando interactuamos con el hardware utilizando la <strong>Interfaz de Línea de Comandos (CLI)</strong> en una terminal de Windows o Linux, para gestionar la seguridad y el almacenamiento de nuestros proyectos.
+            </p>
+
+            <p>
+                <li>
+                    <strong>Manipulación del Sistema de Archivos y Permisos:</strong> Al ejecutar comandos esenciales como "mkdir" para estructurar directorios o "chmod" en entornos Unix para alterar los privilegios de un archivo de código, no estamos modificando el disco duro directamente. El sistema operativo intercepta la orden, valida si nuestro usuario tiene los permisos de administrador necesarios y traduce la instrucción en llamadas al sistema (System Calls) para reescribir los sectores físicos del disco duro.
+                </li>
+
+                <li>
+                    <strong>Redirección de Entrada y Salida (I/O):</strong> Cuando ejecutamos un script y redirigimos su salida hacia un archivo de texto plano utilizando operadores en la consola (como "python script.py > salida. txt"), el sistema operativo interviene reconfigurando los descriptores de flujo estándar. En lugar de enviar los impulsos eléctricos hacia el controlador de la pantalla (monitor), el kernel devía el flujo de datos directamente hacia el sistema de archivos en el almacenamiento secundario.
+                </li>
+            </p>
+
+            <p>
+                Este entorno representa un escenario práctico ideal porque demuestra cómo el sistema operativo actúa como una capa protectora y organizativa. Un programador no necesita conocer la dirección física exacta de los bloques de memoria del disco ni programar los motores de un disco mecánico o las celdas de un SSD; el sistema operativo gestiona toda la complejidad física del hardware a bajo nivel mediante sus controladores oficiales, permitiendo que nos enfoquemos exclusivamente en la lógica del software.
+            </p>
+
+                <h3>Reflexión Personal</h3>
+
+                <p>
+                    <li>
+                        <strong>¿Por qué elegí este tema?</strong>
+                    </li>
+                      <p>
+                        Elegí profundizar en los sistemas operativos porque considero que representa la obra cumbre de la ingeniería de software. Me parece fascinante cómo un programa puede tener la capacidad de controlar millones de pulsos eléctricos por segundo en los circuitos del procesador y convertilos en una experiencia fluida, ordenada y segura para el usuario. Comprender cómo un sistema operativo gestiona los recursos a bajo nivel nos cambia por completo la perspectiva como futuros ingenieros, enseñandonos a escribir código mucho más eficiente que aproveche al máximo las capacidades reales del hardware.
+                      </p>
+                </p>
+
+                <p>
+                    <li>
+                        <strong>¿Dónde se aplica?</strong>
+                    </li>
+                       <p>
+                        A nivel profesional, los conceptos de sistemas operativos se aplican en absolutamente cualquier dispositivo tecnológico del planeta, mucho más allá de las computadoras de escritorio convencionales. Es la tecnología base detrás de los servidores empresariales que sostienen el internet (usando distribuciones robustas de Linux), el corazón de la telefonía móvil a través de Android e iOS, y el pilar del desarrollo de sistemas para el <strong>Internet de las Cosas (IoT)</strong> y <strong>Sistemas Embebidos,</strong> donde sistemas operativos de tiempo real (RTOS) controlan desde dispositivos médicos de alta precisión hasta la computadora a bordo de un automóvil moderno.
+                       </p>
+                </p>
+
+
+
+
+
+
+        </div>
+    </main>
+
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="styles.css">
+<script src="js/index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualización</title>
+</head>
+<body>
+    
+     <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo">
+            </div>
+            <div class="user-name">
+                <span>Fatui</span>
+            </div>
+        </div>
+
+           <div class="nav-links">
+            <a href="index.html" class="nav-btn">Inicio</a>
+            <a href="software.html" class="nav-btn">Software</a>
+            <a href="virtualizacion.html" class="btn-nav">Virtualización</a>
+            <a href="so.html" class="nav-btn">SO</a>
+            <a href="bd.html" class="nav-btn">BD</a>
+    
+    
+           </div>
+        
+        <div class="nav-center">
+           <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar">
+           </div>
+           
+    </nav>
+
+
+    <main>
+        <main class="Title">
+            <div class="Title-container-virtualizacion">
+              <h1>Virtualización</h1>
+            </div>
+    </main>
+
+         <main class="Content">
+            <div class="container">
+              <p>
+                 Al adentrarme en el estudio de los sistemas de cómputo, entiendo la virtualización como una tecnología avanzada de abstracción de recursos informáticos. En la infraestructura tradicional, existia una limitación física estricta: un solo sistema operativo se ejecutaba directamente sobre un único hardware, lo que provocaba que servidores con procesadores masivos y gran cantidad de memoria RAM desperdiciaran hasta un 80% de su capacidad real operativa.
+              </p>
+              <p>
+                 La virtualización rompe este esquema mediante la introducción del Hipervisor o Monitor de Máquina Virtual (VMM). El hipervisor es una capa especializada de software que se encarga de interceptar, administrar y canalizar las solicitudes de recursos que los sistemas operativos invitados hacen hacia los componentes físicos del equipo (como ciclos de CPU, direccionamiento de memoria RAM y bloques de almacenamiento). Dependiendo de la arquitectura del entorno, podemos implementar un Hipervisor Tipo 1 (o Bare-Metal, instalado directamente sobre el hardware, como VMware ESXi) o un Hipervisor Tipo 2 (instalado sobre un sistema operativo anfitrión, como Oracle VM VirtualBox). Gracias a este aislamiento lógico, es posible fragmentar el hardware real para dar vida a múltiples entornos virtuales independientes y concurrentes, permitiendo que sistemas Windows, distribuciones Linux y servicios de red coexistan en el mismo ordenador sin interferir entre sí.
+
+                     <div class="img_virtual">
+                        <img src="img/vmware.png" alt="Tipo1" class="logo-vmware">
+                        <img src="img/virtualbox.png" alt="Tipo2" class="logo-virtualbox">
+                     </div>
+
+              </p>
+              
+              <p>
+                 Para comprender este proceso en un escenario de ingeniería real, supongamos que estamos desarrollando una aplicación web completa que requiere una arquitectura de capas lógicas aisladas. En lugar de instalar de forma desordenada todos los servicios en nuestro sistema operativo Windows principal, utilizamos la virtualización para segmentar e independizar la infraestructura. 
+              </p>
+                <p>
+                    <li>
+                        <strong>Servidor de Base de Datos Aislado: </strong> Creamos una primera máquina virtual ligera a la que asignamos recursos específicos (como 2GB de Memoria RAM y un disco virtual de 15GB) e instalamos una distribución orientada a servidores como Ubuntu Server. Dentro de este entorno configuramos un motor de basses de datos como MySQL. Al estar completamente virtualizado, podemos establecer reglas estrictas en los archivos de configuración del sistema para que solo acepte peticiones provenientes de direcciones IP específicas dentro de nuestra red virtual local.
+                    </li>
+                    <li>
+                        <strong>Servidor Web y de Aplicaciones:</strong> Levantamos una segunda máquina virtual totalmente independiente con su propia asignación de hardware (por ejemplo, 2 núcleos de CPU y 2GB de RAM) corriendo un servidor HTTP como Nginx o Apache. Este servidor se encarga exclusivamente de interpretar el código backend de nuestra aplicación y se comunica de manera interna con la máquina virtual de la base de datos a través de sockets de red virtuales.
+                    </li>
+                </p>
+            <p>
+                 Este entorno representa un escenario práctico ideal porque emula a la perfección la arquitectura real de producción de una empresa de tecnología, donde las bases de datos y los servidores web jamás se meszclan en el mismo equipo físico por motivos de rendimiento y seguridad. Además, nos otorga un entorno de experimentación absoluto: si durante una práctica cometemos un error crítico en las configuraciones, alteramos accidentalmente los privilegios del sistema de archivos de Linux, o sufrimos una vulnerabilidad que colapse el servidor web, el impacto en nuestro equipo real es cero. Nuestro sistema operativo principal y nuestros archivos personales permanecen intactos fuera de la zona de peligro. Basta con revertir la máquina virtual a un estado previo mediante una instantánea ("Snapshot") o eliminarla y clonar una nueva en cuestión de segundos para reanudar las pruebas.
+            </p>
+
+              <h3>Reflexión Personal</h3>
+
+              <p>
+                <li>
+                    <strong>¿Por qué elegí este tema?</strong>
+                    <p>
+                       Elegí profundizar en la virtualización porque considero que representa uno de los pilares tecnológicos más disruptivos y eficientes de la informática moderna. Como estudiante de ingeniería, me fascina cómo el software tiene la capacidad de redefinir por completo las capacidades y los limites del hardware físico. Este concepto nos enseña un principio fundamental de la optimización de sistemas: la eficiencia no radica en comprar componentes costosos o añadir más infraestructura física por inercia, sino en saber gobernar, particionar y exprimir de manera inteligente y lógica los recursos de cómputo que ya tenemos disponibles. 
+                    </p>
+                </li>
+                
+                <li>
+                    <strong>¿Dónde se aplica?</strong>
+                    <p>
+                       A nivel profesional, esta tecnología se aplica de forma idéntica al ejemplo de laboratorrio que planteé anteriormente. En el mundo real, las empresas no instalan sus páginas web, sus sistemas de contabilidad y sus bases de datos en una solo máquina física, ya que si esta falla, se cae todo el negocio. Se aplica en los centros de datos modernos para crear servidores virtuales independientes para cada servicio. Además, es el corazón de la Cloud Computing; plataformas como Amazon Web Services (AWS) o Google Cloud funcionan exactamente bajo este principio, permitiendo que empresas de todo el mundo alquilen fragmentos de servidores virtuales de forma segura, aislada y escalable en cuestión de segundos.
+                    </p>
+                </li>
+                
+                
+              </p>
+
+            </div>
+          </main>
+
+
+
+
+
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

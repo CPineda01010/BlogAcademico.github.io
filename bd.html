@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="styles.css">
+<script src="js/index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de Datos</title>
+</head>
+<body>
+    
+     <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo">
+            </div>
+            <div class="user-name">
+                <span>Fatui</span>
+            </div>
+        </div>
+
+           <div class="nav-links">
+            <a href="index.html" class="nav-btn">Inicio</a>
+            <a href="software.html" class="nav-btn">Software</a>
+            <a href="virtualizacion.html" class="btn-nav">Virtualización</a>
+            <a href="so.html" class="nav-btn">SO</a>
+            <a href="bd.html" class="nav-btn">BD</a>
+    
+    
+        </div>
+        
+        <div class="nav-center">
+           <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar">
+        </div>
+           
+    </nav>
+    <main>
+        <main class="Title">
+            <div class="Title-container-BD">
+              <h1>Bases de Datos</h1>
+            </div>
+    </main>
+        <main class="Content">
+        <div class="container">
+           <p>
+            Al analizar los componentes esenciales de los sistemas de información, entiendo una base de datos como un sistema estructurado para almacenar, organizar, administrar y recuperar grandes volúmenes de datos de forma electrónica y centralizada. A diferencia de un almacenamiento de archivos tradicional y plano, las bases de datos garantizan la integridad, seguridad y consistencia de la información, permitiendo que múltiples usuarios o aplicaciones externas accedan a los datos de manera simultánea sin generar conflictos de redundancia o pérdida de datos.
+           </p>
+           <p>
+            El control y gobierno de este ecosistema se realiza a través de un software especializado denominado <strong>Sistema de Gestión de Bases de Datos (DBMS).</strong> En el ámbito de la ingeniería, la arquitectura más utilizada es el modelo <strong>Relacional (RDBMS),</strong> el cual organiza la información en tablas compuestas por filas (registros) y columnas (campos), conectadas entre sí mediante claves primarias y foráneas bajo una lógica matemática. Para interactuar con este sistema, los ingenieros utilizamos <strong>SQL (Structured Query Language),</strong> un lenguaje estandarizado que permite realizar consultas complejas, inserciones, actualizaciones y el diseño lógico de las estructuras de almacenamiento.
+               
+               <div class="img_bd">
+                        <img src="img/mysql.png" alt="Edit" class="logo-mysql">
+                       
+               </div>
+            </p>
+
+            <p>
+               Un escenario directo de aplicación que implemente en mis laboratorios es el desarrollo de una base de datos relacional llamada "BDProductos" mediante el entorno de <strong>MySQL Workbench,</strong> diseñada para controlar de manera óptima el inventario de una organización.
+            </p>
+
+            <p>
+                <li>
+                    <strong>Diseño Lógico y Relaciones (DDL):</strong> Estructuré el sistema dividiendo la información en tres entidades principales independientes: "TipoProducto", "Proveedor" y "Producto". Utilizando sentencias SQL, definí llaves primarias autoincrementables y llaves foráneas ("FOREIGN KEY") para enlazar de forma lógica cada artículo con su respectivo proveedor y categoría, garantizando que no existan datos huérfanos dentro del almacenamiento.
+                </li>
+
+                <li>
+                    <strong>Consultas Relacionales Avanzadas (DML):</strong> Para extraer información útil para el usuario, ejecuté sentencias complejas de selección combinando las tablas mediante operaciones "LEFT JOIN". Por ejemplo, al realizar una consulta estructurada que enlaza el nombre del tipo de producto, la descripción del artículo y la empresa proveedora, el motor procesa el cruce de datos en milisegundos y devuelve una matriz limpia con la información consolidada.
+                </li>
+            </p>
+
+            <p>
+                Este entorno representa un escenario práctico ideal porque demuestra la eficiencia de la indexación y el álgebra relacional. Si la empresa cuenta con miles de artículos registrados, no es necesario duplicar el nombre de un proveedor en cada fila; basta con invocar su identificador numérico único, lo que reduce drásticamente el espacio de almacenamiento físico y acelera la velocidad de respuesta del sistema informático.
+            </p>
+
+           <h3>Reflexión Personal</h3>
+            <p>
+                <strong>¿Por qué elegí este tema?</strong>
+                 <p>
+                    Elegí profundizar en las bases de datos proque considero que son el núcleo invisible de cualquier sistema o aplicación moderna. en la Ingeniería en Sistemas, el código y las interfaces de usuario no tienen utilidad real si no cuentan con un motor robusto y eficiente detrás que sea capaz de gestionar la información. Me apasiona cómo la lógica matemática y el diseño relacional pueden transformar un conjunto masivo y desordenado de datos en información estructurada de alto valor para la toma de decisiones.
+                 </p>
+            </p>
+
+            <p>
+                <strong>¿Dónde se aplica?</strong>
+                 <p>
+                    A nivel profesional, esta tecnología se aplica de forma idéntica al laboratorio desarrollado para gestionar inventarios comerciales. Es el pilar fundamental que sostiene los centros de distribución de grandes cadenas de tiendas, el control de stock de farmacias y las plataformas de comerico electrónico. Cada vez que compramos un artículo en línea, consultamos la disponibilidad de una sucursal o registramso la entrada de mercadería, el backend ejecuta consultas relacionales internas para manterner actualizadas las existencias globales, demostrando que ninguna infraestructura de software comercial actual puede operar sin una base de datos eficiente.
+                 </p>
+            </p>
+
+
+
+
+         </div>
+    </main>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
